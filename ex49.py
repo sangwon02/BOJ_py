@@ -3,5 +3,6 @@ str = input()
 
 for i in cro:
     str = str.replace(i, '*')
+    
 
-print(len(str))
+print(len(str)) 

@@ -7,7 +7,8 @@ for i in range(n):
         if str[j] != str[j+1]:
             new_str = str[j+1:]
             if new_str.count(str[j]) >=1:
+                
                 no += 1
     if no == 0:
         cnt += 1
-print(cnt)
+print(cnt) 
