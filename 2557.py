@@ -1,6 +1,5 @@
 def new_func():
-    print( "Hello World!" )
+    print("Hello World!")
 
 new_func()
-
 
