@@ -1,2 +1,2 @@
 num = int(input())
-print(num-543)
+print(num-543 )
