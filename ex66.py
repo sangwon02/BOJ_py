@@ -7,6 +7,7 @@ n1 = w-x
 n2 = h-y
 n3 = x
 n4 = y
+#print(min(n1, n2, n3, n4)) 쓰면 끝남
 
 if n1 <= n2:
     if n1 <= n3:
