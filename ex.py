@@ -16,7 +16,16 @@ print("dfsfsdfsdfsdf"[:3])
 sorted(li)
 #숫자 오름차순으로 정렬
 
-li =[]
+del li[0] 
+#리스트 첫번째 값 제거
 
+min(li), max(li)
+#가장 작은 값과 큰 값 출력
+
+li =[]
+k = 0
+
+li.append(k)
+#리스트에 항목추가
 for i in range(n):
     li.append(int(input()))
