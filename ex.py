@@ -25,6 +25,11 @@ min(li), max(li)
 li =[]
 k = 0
 
+num = 0
+while num <= 100:
+    print(num)
+    num = num + 1
+
 li.append(k)
 #리스트에 항목추가
 for i in range(n):
