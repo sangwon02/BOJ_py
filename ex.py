@@ -2,7 +2,7 @@ i = 0
 
 n = int(input())
 
-str = input()
+str1 = input()
 
 n1, n2 = map(int, input().split())
 
