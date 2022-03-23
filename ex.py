@@ -3,6 +3,8 @@ i = 0
 import sys
 n = int(sys.stdin.readline())
 
+n = int(input())
+
 str1 = input()
 
 n1, n2 = map(int, input().split())
