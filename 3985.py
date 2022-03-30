@@ -1,24 +1,20 @@
 L = int(input())
+li = [0] * (L + 1)
 N = int(input())
-maxnum = 0
-num = 0
-num1 = 0
-num2 = 0
-li = []
+num1 = [0] * (N + 1)
+maxnum, M_cnt = 0, 0
 
-for i in range(L):
-    li.append(0)
-for i in range(N):
-    n1, n2 = map(int, input().split())
-    for j in range(n1, n2+1, 1):
-        if li[j] == 0:
-            li[j] = i + 1
-    if n2 - n1 > maxnum:
-        maxnum = n2 - n1
-        num = i + 1
+for i in range(1, N + 1):
+    P, K = map(int, input().split())
+    if K - P - 1 > M_cnt:
+        maxnum = i
+        M_cnt = K-P-1
+    cnt = 0
+    for j in range(P, K + 1):
+        if not li[j]:
+            li[j] = 1
+            cnt += 1
+    num1[i] = cnt
 
-remove_set = {0}
-li = [i for i in li if i not in remove_set]
-
-print(num)
-print(max(li))
+print(maxnum)
+print(num1.index(max(num1)))
