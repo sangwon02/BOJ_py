@@ -15,6 +15,8 @@ li = list(map(int, input().split()))
 
 set1 = set(map(int, input().split()))
 
+li = input().split()
+
 print("dfsfsdfsdfsdf"[:3])
 #3번째 까지 문자열 출력
 
