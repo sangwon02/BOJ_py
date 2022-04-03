@@ -1,4 +1,5 @@
 N = int(input())
+
 for i in range(N):
     s1, s2 = input().split()
     li1 = list(s1)
