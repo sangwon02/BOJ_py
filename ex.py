@@ -21,9 +21,9 @@ print("dfsfsdfsdfsdf"[:3])
 #3번째 까지 문자열 출력
 
 li.sort(reverse=False)
-#숫자 오름차순으로 정렬
+#숫자, 문자 오름차순으로 정렬
 li.sort(reverse=True)
-#숫자 내림차순으로 정렬
+#숫자, 문자 내림차순으로 정렬
 
 del li[0] 
 #리스트 첫번째 값 제거
@@ -43,3 +43,7 @@ li.append(k)
 #리스트에 항목추가
 for i in range(n):
     li.append(int(input()))
+
+li = ['A', 'B', 'C', 'D', 'B', 'D', 'E']
+st = set(li) #집합set으로 변환
+li = list(st) #list로 변환
