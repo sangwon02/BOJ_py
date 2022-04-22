@@ -1,0 +1,5 @@
+n = int(input())
+a = list(map(int, input().split()))
+n1 = max(a)
+n2 = min(a)
+print(n1 * n2)
