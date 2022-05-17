@@ -1,7 +1,7 @@
-import sys
+import sys #sys 불러옴
 
-while True:
-    str1 = sys.stdin.readline().rstrip('\n')
+while True: #무한 반복
+    str1 = sys.stdin.readline().rstrip('\n') #문자열을 입력 받음
 
     if not str1:
         break

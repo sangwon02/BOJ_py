@@ -1,9 +1,9 @@
-S = input()
-li = [0]*26
+S = input() #문자열을 입력 받음
+li = [0]*26 #리스트의 원소를 알파벳의 개수만큼 만듬
 
-for i in S:
-    li[ord(i) - 97] += 1
+for i in S: #문자열의 문자를 i에 하나씩 대입하며 반복
+    li[ord(i) - 97] += 1 #알파벳의 위치의 +1
     #아스키코드를 사용
     
-for j in li:
+for j in li: #리스트를 출력
     print(j, end=" ")
