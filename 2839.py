@@ -1,8 +1,9 @@
-n = int(input())
-if n%5==0:
-    print(n//5)
-elif (n-3)%5==0 and n>=3:
-    print((n-3)//5+1)
+n = int(input()) #정수 입력 받음
+if n%5==0: #n이 5로 나누어떨어지면
+    print(n//5) #n나누기5 출력
+elif (n-3)%5==0 and n>=3:#n-3이 5로 나누어지고 n이 3이상이면
+    print((n-3)//5+1) #(n-3)//5+1을 출력
+#더이상 주석 달 필요는 없는듯
 elif (n-6)%5==0 and n>=6:
     print((n-6)//5+2)
 elif (n-9)%5==0 and n>=9:
