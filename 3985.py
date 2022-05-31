@@ -1,7 +1,7 @@
 L = int(input()) #롤케이크의 길이 입력 받음
 li = [0] * (L + 1) #크기가 L+1인 리스트 생성
 N = int(input()) #방청객의 인원을 입력 받음
-num1 = [0] * (N + 1)
+num1 = [0] * (N + 1) #리스트 생성해줌
 maxnum, M_cnt = 0, 0
 
 for i in range(1, N + 1):
