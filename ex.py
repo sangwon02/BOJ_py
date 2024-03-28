@@ -47,3 +47,5 @@ for i in range(n):
 li = ['A', 'B', 'C', 'D', 'B', 'D', 'E']
 st = set(li) #집합set으로 변환
 li = list(st) #list로 변환
+
+arr = [[0] * 100 for _ in range(100)] # 배열 만들기
