@@ -1,6 +1,6 @@
 i = 0
-
-import sys
+# 이게 더 빠름
+import sys  
 n = int(sys.stdin.readline())
 
 n = int(input())

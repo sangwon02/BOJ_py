@@ -1,6 +1,6 @@
 import sys
-n=int(sys.stdin.readline())
-li=[]
+n = int(sys.stdin.readline())
+li = []
 
 for i in range(n):  # 좌표값 입력 받고
     x, y = map(int, sys.stdin.readline().split())
