@@ -3,6 +3,9 @@ i = 0
 import sys  
 n = int(sys.stdin.readline())
 
+import sys
+a, b = map(int, sys.stdin.readline().split())
+
 n = int(input())
 
 str1 = input()
