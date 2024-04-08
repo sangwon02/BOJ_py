@@ -1,11 +1,11 @@
 i = 0
 li = []
-# 이게 더 빠름
-import sys  
-n = int(sys.stdin.readline())
-
+# 이게 더 빠름 이거 쓰는 습관 들이기
 import sys
-a, b = map(int, sys.stdin.readline().split())
+input = sys.stdin.readline
+
+n = input()
+n, m = map(int, input().split())
 
 #리스트 요소 하나하나 띄어쓰기 출력
 print(" ".join(map(str, li)))
