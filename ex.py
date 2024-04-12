@@ -4,7 +4,7 @@ li = []
 import sys
 input = sys.stdin.readline
 
-n = input()
+n = int(input())
 n, m = map(int, input().split())
 
 #리스트 요소 하나하나 띄어쓰기 출력
