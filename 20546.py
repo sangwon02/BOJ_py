@@ -5,13 +5,13 @@ n = int(input())  # 서로 가지게 되는 현금 입력 받음
 li = list(map(int, input().split()))  # 날마다의 주식 가격 입력해 리스트에 저장
 
 junstock = 0  # 준성이가 가지고 있는 주식
-junmoney = n  # 현재 준성이가 가지고 있는 현금
-
+junmoney = n  # 현재 준현이가 가지고 있는 현금
+# 준현의 주식 매매 방법
 for i in li: 
     while junmoney >= i:  # 주식을 살 수 없을때 까지 주식 매입
         junstock += 1
         junmoney = junmoney - i
-# 마지막 날짜에 준성이가 가지게 되는 돈
+# 마지막 날짜에 준현이가 가지게 되는 돈
 junfinal = junmoney + junstock*li[-1]  
 
 sungmoney = n  # 현재 성민이가 가지고 있는 현금
@@ -19,6 +19,7 @@ sungstock = 0  # 성민이가 가지고 있는 주식
 down = 0  # 주식이 몇일 연속 하락하는지 기록
 ascend = 0  # 주식이 몇일 연속 상승하는지 기록
 
+# 성민의 주식 매매 방법
 for i in range(len(li)-1):
     if li[i] < li[i+1]:  # 주식이 전날 대비 상승했다면
         ascend += 1  # 연속으로 주식이 오르는 일수 +1
