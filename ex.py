@@ -5,7 +5,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-s = input().lstrip()  # 문자열 받을때
+s = input().strip()  # 문자열 받을때
 n, m = map(int, input().split())
 
 #리스트 요소 하나하나 띄어쓰기 출력
