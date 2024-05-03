@@ -21,7 +21,7 @@ print(i, end ="")
 
 li = list(map(int, input().split()))
 
-set1 = set(map(int, input().split()))
+set1 = set(map(int, input().split())) # 집합 중복된 값 제거하고 리스트보다 빠름
 
 li = input().split()
 
