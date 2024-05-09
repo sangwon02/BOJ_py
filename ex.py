@@ -19,6 +19,8 @@ n1, n2 = map(int, input().split())
 
 print(i, end ="")
 
+li.append(int(input())) #for문으로 입력 받을때
+
 li = list(map(int, input().split()))
 
 set1 = set(map(int, input().split())) # 집합 중복된 값 제거하고 리스트보다 빠름
