@@ -48,6 +48,8 @@ num = 0
 while num <= 100:
     print(num)
     num = num + 1
+    
+print(*li) # 리스트 대괄호 없이 출력
 
 li.append(k)
 #리스트에 항목추가
