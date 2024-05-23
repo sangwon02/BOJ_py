@@ -51,6 +51,8 @@ while num <= 100:
     
 print(*li) # 리스트 대괄호 없이 출력
 
+array = list(range(1,n+1)) # 1부터 n까지의 리스트 생성
+
 li.append(k)
 #리스트에 항목추가
 for i in range(n):
