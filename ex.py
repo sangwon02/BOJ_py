@@ -25,7 +25,7 @@ li = list(map(int, input().split()))
 
 set1 = set(map(int, input().split())) # 집합 중복된 값 제거하고 리스트보다 빠름
 
-li = input().split()
+li = input().split() # 문자열 띄어쓰기 별로 나누어서 저장
 
 print("dfsfsdfsdfsdf"[:3])
 #3번째 까지 문자열 출력
