@@ -38,7 +38,3 @@ for i in range(n):
             print(-1)
         else:
             print(queue[-1])
-
-
-
-
