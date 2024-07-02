@@ -2,8 +2,7 @@ import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())  # n과 m을 입력 받음
-
-arr = []  # 
+arr = []  # 문자열을 받을 변수
 
 # n개의 문자열을 arr에 저장
 for i in range(n):
@@ -11,6 +10,7 @@ for i in range(n):
 
 cnt = 0  # Hamming Distance의 합을 저장할 변수
 result = ''  # Hamming Distance의 합이 가장 작은 DNA를 저장할 변수
+
 for i in range(m):  # result의 길이가 m이여야 하니 m번 반복
     a_cnt,t_cnt, g_cnt, c_cnt = 0, 0, 0, 0  # A, T, G, C가 나오면 카운트 할 변수
     for j in range(n):  # n개의 DNA를 전부 탐색
