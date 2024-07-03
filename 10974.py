@@ -14,4 +14,4 @@ def all_permutations():  # 모든 순열을 구해주는 함수 선언
     
 n = int(input())
 ans = []
-all_permutations()
+all_permutations() 
