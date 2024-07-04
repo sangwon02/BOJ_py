@@ -18,4 +18,3 @@ li = list(map(int, input().split()))
 li.sort(reverse=False)  #숫자, 문자 오름차순으로 정렬
 result = []
 dfs()
-
