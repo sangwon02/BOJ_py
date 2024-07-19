@@ -11,6 +11,10 @@ n, m = map(int, input().split())
 #리스트 요소 하나하나 띄어쓰기 출력
 print(" ".join(map(str, li)))
 
+from itertools import combinations
+
+map = [list(map(int, input().split())) for _ in range(n)]
+
 n = int(input())
 
 str1 = input()
