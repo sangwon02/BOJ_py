@@ -1,2 +1,4 @@
-for i in range(1,5//2+3):
-    print(i)
+n = 3
+if n == 3:
+    n =+ 3
+print(n)
