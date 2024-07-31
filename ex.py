@@ -23,6 +23,8 @@ n1, n2 = map(int, input().split())
 
 print(i, end ="")
 
+print(*li)  # 리스트 뛰어쓰기하며 출력
+
 li.append(int(input())) #for문으로 입력 받을때
 
 li = list(map(int, input().split()))
