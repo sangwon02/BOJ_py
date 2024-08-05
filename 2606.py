@@ -1,16 +1,25 @@
-import sys
-input = sys.stdin.readline
+from collections import deque
 
-n = int(input())
-m = int(input())
-couple = []
-for i in range(m):
-    n1, n2 = map(int, input().split())
-    couple.append([n1, n2])
-couple.sort(reverse=False)
-result = {1}
-for i in couple:
-    if (i[0] in result) or (i[1] in result):
-        result.add(i[0])
-        result.add(i[1])
-print(len(result)-1)
+n=int(input()) 
+v=int(input()) 
+
+graph = [[] for i in range(n+1)] 
+visited=[0]*(n+1) 
+
+for i in range(v):
+    a,b=map(int,input().split())
+    graph[a]+=[b] 
+    graph[b]+=[a] 
+
+visited[1]=1
+
+Q=deque([1])
+
+while Q:
+    c=Q.popleft()
+    for nx in graph[c]:
+        if visited[nx]==0:
+            Q.append(nx)
+            visited[nx]=1
+
+print(sum(visited)-1)
