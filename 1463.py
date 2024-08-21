@@ -1,17 +1,25 @@
 import sys
-input = sys.stdin.readline
-# 공부하고 다시 풀기
-n = int(input())
-cnt = 0
-while n != 1:
-    if n%3 == 0:
-        n = n/3
-    elif (n-1)%3 == 0:
-        n = (n-1)/3
-        cnt += 1
-    elif n%2 == 0:
-        n = n/2
-    else:
-        n -= 1
-    cnt += 1
-print(cnt)
+from collections import deque
+
+n = int(sys.stdin.readline())
+visited = [0 for i in range(n+1)]
+
+def bfs():
+    q = deque()
+    q.append(n)
+    while q:
+        cur = q.popleft()
+        if cur==1:
+            break
+        if cur%3==0 and visited[cur//3]==0:
+            visited[cur//3] = visited[cur] + 1
+            q.append(cur//3)
+        if cur%2 == 0 and visited[cur//2]==0:
+            visited[cur//2] = visited[cur] + 1
+            q.append(cur//2)
+        if visited[cur-1]==0:
+            visited[cur-1] = visited[cur] + 1
+            q.append(cur-1)
+
+bfs()
+print(visited[1])
