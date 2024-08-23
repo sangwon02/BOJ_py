@@ -27,6 +27,9 @@ print(*li)  # 리스트 뛰어쓰기하며 출력
 
 li.append(int(input())) #for문으로 입력 받을때
 
+# 주의 sys.stdin.readline 쓰면 안됨
+li.append(list(map(int, input()))) # 띄어쓰기 없이 입력 받아도 정수 하나씩 저장
+
 li = list(map(int, input().split()))
 
 set1 = set(map(int, input().split())) # 집합 중복된 값 제거하고 리스트보다 빠름
