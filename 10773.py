@@ -1,11 +1,15 @@
-K = int(input())
-li = []
-for i in range(K):
+import sys
+input = sys.stdin.readline
+
+k = int(input())
+
+stack = []
+
+for _ in range(k) :
     n = int(input())
-    if n != 0:
-        li.append(n)
-    elif n == 0:
-        if len(li)==0:
-            continue
-        del li[len(li)-1]
-print(sum(li))
+    if n == 0 :
+        stack.pop()
+    else :
+        stack.append(n)
+
+print(sum(stack))
