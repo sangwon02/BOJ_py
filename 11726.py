@@ -9,4 +9,4 @@ dp[2] = 2  # n이 2인 경우
 for i in range(3,n+1): 
     dp[i] = (dp[i-1] + dp[i-2]) % 10007 # 점화식을 사용해서 n까지의 경우의 수를 구한다.
     
-print(dp[n])  
+print(dp[n])
