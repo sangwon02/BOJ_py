@@ -1,15 +1,23 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
-s = 0 # 시작 점
-e = n # 끝 점
+N, M = map(int, input().split())
 
-while s <= e: # s가 e보다 크면 종료
-    mid = (s + e) // 2 # s와 e의 중간 지점을 찾고
-    if mid ** 2 < n:  # 만약 중간 지점의 제곱한 값이 n보다 작으면
-        s = mid + 1  # s를 중간 점+1 로 변경
-    else:  # 만약 중간 지점의 제곱한 값이 n보다 크면
-        e = mid - 1 # s를 중간 점-1 로 변경
+trees = list(map(int, input().split()))
 
-print(s)  # 정답 출력
+left, right = 0, max(trees)
+
+while left <= right:
+    mid = (left + right) // 2
+    total = 0
+
+    for tree in trees:
+        if tree >= mid:
+            total += tree - mid
+
+    if total >= M:
+        left = mid + 1
+    else:
+        right = mid - 1
+
+print(right)
