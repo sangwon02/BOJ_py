@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 cnt666 = 666  # 시작 숫자를 666부터 시작
 cnt = 0  # 몇 번째로 작은 수인지 카운트
