@@ -14,7 +14,7 @@ for i in range(m):  # 그래프에 도시끼리의 정보를 담는다.
     a, b = map(int, input().split())
     graph[a].append(b)
 
-def dijkstra(start):  # 다익스트라 알고리즘
+def dijkstra(start):
     q = []
     heapq.heappush(q, (0, start))  # 소스를 집어 넣음
     distance[start] = 0
@@ -31,7 +31,7 @@ def dijkstra(start):  # 다익스트라 알고리즘
 
 dijkstra(x)
 flag = 0
-for i in range(1, n+1):  # 만약 최단거리가 k인 도시가 있다면
+for i in range(1, (n+1)):  # 만약 최단거리가 k인 도시가 있다면
     if distance[i] == k: # 출력
         print(i)
         flag = 1
