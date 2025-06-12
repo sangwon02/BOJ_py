@@ -1,15 +1,23 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-n_num = list(map(int, input().split()))  # 상근이가 가지고 있는 카드
-
+nli = list(map(int, input().split()))  # 상근이가 가진 카드 입력 받고
 m = int(input())
-m_num = list(map(int, input().split()))  # 비교할 카드
+mli = list(map(int, input().split()))  # 비교할 카드 입력 받는다.
+# 일단 다 입력 받고
 
-n_num_dict = {}  # 속도는 dictionary가 빠름
-for i in n_num:
-    n_num_dict[i] = 0
+result = {} 
+# 정답을 받을 딕셔너리 생성
+# 이유) 딕셔너리가 연산이 더 빠르다
 
-for i in m_num:  # 비교할 카드를 하나하나 꺼내고
-    if i in n_num_dict:  # 만약 상근이 손에 있다면
-        print("1",end=" ")  # 1 출력
-    else:  # 없다면
-        print("0",end=" ")  # 0 출력
+for i in range(n):
+    result[nli[i]] = 0  
+    # nli에 있는 요소들을 result에 추가
+    # 매핑은 0으로
+
+for i in mli:  # mli에 있는 정수들을 하나씩 꺼내며 돌고
+    if i in result:  # 만약 그게 reslut에 있다면
+        print(1, end=" ") # 1을 출력
+    else:  # 없으면
+        print(0, end=" ") # 0을 출력
