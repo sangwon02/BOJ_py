@@ -14,7 +14,7 @@ print(" ".join(map(str, li)))
 from itertools import combinations
 
 map = [list(map(int, input().split())) for _ in range(n)]
-
+    
 n = int(input())
 
 str1 = input()

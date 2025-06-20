@@ -1,11 +1,16 @@
-num = int(input()) #숫자를 입력 받음
+import sys
+input = sys.stdin.readline
 
-for i in range(1, num+1):  
-    num1 = sum((map(int, str(i)))) #i의 각자리수의 합을 num1에 저장
-    su = i + num1 #i와 num1의 합을 su에 저장
+n = int(input())  # 생성자를 찾기 위한 n 입력 받고
 
-    if su == num: #만약 su와 num의 값이 같다면 i가 num의 생성자
-        print(i) #i 출력
-        break #for문 멈춤
-    if i == num: #입력받은 숫자까지 탐색했으나 분해합이 없으면
-        print(0) #0을 출력함
+for i in range(1, n+1):  # 가장 낮은 수부터 차례대로 생성자를 찾는다.
+    sum = i  # 분해합을 담을 변수
+    num = i
+    while i%10: # 각 자리수를 구할 수 없을때 까지
+        sum += i%10 # 각 자리수를 더해준다.
+        i = i//10  
+    if sum == n: # 만약 n과 같다면
+        print(num)  # 답을 출력하고
+        exit()  # 프로그램 종료
+
+print(0)  # 답이 없으면 0을 출력
