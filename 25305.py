@@ -1,7 +1,10 @@
-n, k = map(int, input().split())
+import sys
+input = sys.stdin.readline
 
-score = list(map(int, input().split()))
+n, k = map(int, input().split())  # 학생 수와 상을 받는 학생 수 입력 받음
 
-score.sort(reverse=True)
+num = list(map(int, input().split()))  # 리스트에 각 학생의 점수 입력 받고
 
-print(score[k-1])
+num.sort(reverse=True)  # 리스트 내림차순 정렬
+
+print(num[k-1])  # 커트라인의 점수를 출력
