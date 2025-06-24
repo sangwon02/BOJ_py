@@ -1,12 +1,14 @@
 import sys
-n = int(sys.stdin.readline())
-li = []
+input = sys.stdin.readline
 
-for i in range(n):  # 좌표값 입력 받고
-    x, y = map(int, sys.stdin.readline().split())
-    li.append([y, x])  # 리스트에 넣을때는 반대로
+n = int(input())
+
+arr = []  
+for i in range(n):  
+    x, y = map(int, input().split())  # x, y 죄표 입력 받고
+    arr.append([y, x])  # 넣을 때는 반대로 해서(y, x) 넣어줌
     
-li = sorted(li)  # 좌표 정렬
+arr.sort(reverse=False)  # sort를 통해 정렬
 
-for y, x in li:  # 좌표 출력
-    print(x, y)
+for i in arr:  # 죄표 출력
+    print(i[1], i[0])  # 출력은 (x, y)
