@@ -1,5 +1,7 @@
 i = 0
 li = []
+set_data = set() # 세트 선언
+
 # 이게 더 빠름 이거 쓰는 습관 들이기
 import sys
 input = sys.stdin.readline
@@ -43,6 +45,7 @@ li.sort(reverse=False)
 #숫자, 문자 오름차순으로 정렬
 li.sort(reverse=True)
 #숫자, 문자 내림차순으로 정렬
+li.sort(key=len) # 문자열 길이순으로 정렬
 
 del li[0] 
 #리스트 첫번째 값 제거
