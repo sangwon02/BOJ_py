@@ -43,9 +43,15 @@ print("dfsfsdfsdfsdf"[:3])
 
 li.sort(reverse=False)
 #숫자, 문자 오름차순으로 정렬
+
 li.sort(reverse=True)
 #숫자, 문자 내림차순으로 정렬
-li.sort(key=len) # 문자열 길이순으로 정렬
+
+li.sort(key=len) 
+# 문자열 길이순으로 정렬
+
+li.sort(key=lambda x:x[0])
+# 2차원 리스트 첫 번째 값을 기준으로 오름차순 이 때, x 값에 -를 취해주면 내림차순 정렬을 할 수 있다.
 
 del li[0] 
 #리스트 첫번째 값 제거
