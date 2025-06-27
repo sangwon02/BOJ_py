@@ -2,15 +2,15 @@ import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
-nset = set()
 
-for i in range(n):  # n개의 문자열을 집합에 저장 
-    nset.add(input().strip())
+s = set() # 집합 s 선언
+res = 0 # 답을 담을 변수
+
+for _ in range(n):
+    s.add(input())  # 문자열을 입력 받고 집합 s에 넣어줌
     
-cnt = 0
-for i in range(m): 
-    s = input().strip()  # 문자열을 입력 받고
-    if s in nset:  # 만약 집합에 있는 문자열이라면 
-        cnt += 1  # +1 카운트 해줌
-
-print(cnt)  # 답 출력
+for _ in range(m):
+    st = input()  # 문자열을 입력 받고
+    if st in s:  # 만약 집합 s에 있다면 
+        res += 1  # res의 값 +1
+print(res)  # res(답) 출력
