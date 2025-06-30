@@ -81,33 +81,3 @@ st = set(li) #집합set으로 변환
 li = list(st) #list로 변환
 
 arr = [[0] * 100 for _ in range(100)] # 배열 만들기
-
-
-
-import sys
-
-def dfs(position, distance):
-    global min_distance
-    if position > D:  # 목표 도착 지점을 초과한 경우
-        return
-    if position == D:  # 정확히 도착한 경우 최솟값 갱신
-        min_distance = min(min_distance, distance)
-        return
-
-    # 현재 위치에서 한 칸씩 이동하는 기본 경로
-    dfs(position + 1, distance + 1)
-
-    # 모든 지름길을 확인하며 사용할 수 있으면 이동
-    for start, end, shortcut in shortcuts:
-        if position == start:
-            dfs(end, distance + shortcut)
-
-# 입력 처리
-N, D = map(int, sys.stdin.readline().split())
-shortcuts = [tuple(map(int, sys.stdin.readline().split())) for _ in range(N)]
-
-# 최소 거리 초기화
-min_distance = D  # 최악의 경우, 그냥 1씩 이동하는 거리
-
-dfs(0, 0)
-print(min_distance)
