@@ -6,6 +6,8 @@ set_data = set() # 세트 선언
 import sys
 input = sys.stdin.readline
 
+n =int(input().rstrip())
+
 n = int(input())
 s = input().strip()  # 문자열 받을때
 n, m = map(int, input().split())
