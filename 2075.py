@@ -6,10 +6,12 @@ heap = []
 n = int(input())
 
 for _ in range(n):
-    numbers = map(int, input().split())
-    for number in numbers:
+    li = map(int, input().split())
+    
+    for number in li:
         if len(heap) < n: 
             heapq.heappush(heap, number)
+            
         else:
             if heap[0] < number:
                 heapq.heappop(heap)
