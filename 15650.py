@@ -1,16 +1,15 @@
-from itertools import combinations  # combinations함수를 불러옴
-import sys
-input = sys.stdin.readline
-
 n, m = map(int, input().split())
-numli = []
+li = []
 
-for i in range(1, n+1):  # 1부터 n까지의 정수가 들어있는 리스트 생성 
-    numli.append(i)
+def dfs(now):
+  if len(li) == m: # 숫자의 개수가 m개이면
+    print(' '.join(map(str, li))) # 수열을 출력
+    return
+
+  for i in range(now, n+1): # n까지 반복
+    if i not in li: # 리스트안에 i가 없다면
+      li.append(i) # i를 추가해줌
+      dfs(i+1) # 현재 숫자보다 큰 숫자만 탐색
+      li.pop()
     
-result = list(combinations(numli, m))  # combinations함수를 이용해 조합을 사용한 경우의 수 저장
-
-for i in result:  # result에 있는 리스트들의 수를 원하는 형식에 맞게 출력
-    for j in i:
-        print(j, end = " ")
-    print("")
+dfs(1)
