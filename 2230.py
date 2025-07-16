@@ -2,22 +2,25 @@ import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
-a = []
+li = []
 for _ in range(n):
-    a.append(int(input()))
+    li.append(int(input()))
     
-a.sort(reverse=False)  # 오름차순으로 정렬 
+li.sort(reverse=False)  # 오름차순으로 정렬 
 result = 10**10
 
-pointer1 = 0
-pointer2 = 0
+n1 = 0
+n2 = 0
 
-while pointer1<n and pointer2<n: # 포인터 값이 리스트의 길이보다 작아야함
-    if (a[pointer2] - a[pointer1]) < m:  # m보다 작을 경우 pointer2을 늘려주어 탐색
-        pointer2 += 1
-    else:  # m보다 크다면
-        result = min(result, a[pointer2]-a[pointer1])  # result값과 비교해서 작은 값을 저장
-        pointer1 += 1
-
-
-print(result)
+while result != m: # 결과 값이 m과 같아지면 종료
+    if result > (li[n2] - li[n1]) and li[n2] - li[n1] >= m:
+        result = li[n2] - li[n1]
+    if li[n2] - li[n1] < m:
+        if n2 != (n-1):
+            n2 += 1
+        elif n2 == (n-1):  # 마지막 인덱스에 도달하면
+            break # 반복문 종료
+    else:
+        n1 += 1
+    
+print(result)  # 결과 출력
