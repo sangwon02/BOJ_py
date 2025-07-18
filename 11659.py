@@ -5,6 +5,7 @@ n, m = map(int, input().split())
 
 li = list(map(int, input().split()))
 sum = [0] # 누적합 구해서 저장할 리스트
+
 # 누적 합 구해두고
 num = 0
 for i in li:
