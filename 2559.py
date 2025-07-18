@@ -12,4 +12,4 @@ for i in li:
     
 for i in range(n-k+1):
     res = max(res, sum[i+k] - sum[i])  # 구간 합 계산 후 최소값 갱신
-print(res)  # 최소값 출력
+print(res)  # 최대값 출력
