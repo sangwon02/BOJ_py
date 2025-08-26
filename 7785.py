@@ -1,18 +1,17 @@
 import sys
+input = sys.stdin.readline
 
-n = int(sys.stdin.readline())
-company = []
+n = int(input())
+company = {}
 
-for i in range(n):
-    name, play = sys.stdin.readline().split()
-    if play=="enter":
-        company.append(name)
+for _ in range(n):
+    name, paly = input().split()
+    if paly == "enter":
+        company[name] = True
     else:
-        company.remove(name)
+        del company[name]
 
-company.sort(reverse=True)
+res = sorted(company.keys(), reverse=True)
 
-for i in company:
-    print(i)
-
-#계속 시간 초과라고 뜨는데 왜 시간 초과인지 모르겠다. 나중에 한번 알아봐야겠다.
+for name in res:
+    print(name)

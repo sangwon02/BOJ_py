@@ -1,14 +1,17 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-li = {}
+company = {}
 
 for _ in range(n):
     n1, n2 = input().split()
 
     if n2 == 'enter':
-        li[n1] = 'enter'
+        company[n1] = 'enter'
     else:
-        if li[n1]:
-            del li[n1]
+        if company[n1]:
+            del company[n1]
 
-for i in sorted(li, reverse=True):
+for i in sorted(company, reverse=True):
     print(i)
