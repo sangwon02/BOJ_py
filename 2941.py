@@ -1,8 +1,7 @@
 cro = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
-str = input()
+st = input()
 
 for i in cro:
-    str = str.replace(i, '*')
+    st = st.replace(i, '*')
     
-
-print(len(str)) 
+print(len(st)) 
