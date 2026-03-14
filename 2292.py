@@ -1,10 +1,15 @@
-n = int(input()) #가야하는 방
-num1=1 #테두리 부분에서 가장 큰 수
-num2=1 #거쳐가는 방의 개수
+import sys
+input = sys.stdin.readline
 
-while 1: #무한반복
-    if n <= num1: #테두리 부분에서 가장 큰 수가 가야하는 방의 수보다 크면
-        print(num2) #거쳐가야 하는 방의 수 출력
-        break #while문 종료
-    num1 = num1 + 6*num2 #없으면 다음으로 테두리 부분에서 가장 큰수를 찾아준다.
-    num2 += 1 #거쳐가야하는 방의 수 증가
+n = int(input())
+
+cnt = 1
+tmp = 1
+
+while True:
+    if n <= 1:
+        break
+    n -= 6*cnt
+    cnt += 1
+
+print(cnt)
