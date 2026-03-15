@@ -1,15 +1,32 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
-nli = set(map(int, input().split()))  
-# 리스트 보다는 set(집합)를 사용해 탐색시간 단축
-m = int(input())
-mli = list(map(int, input().split()))  
-# m의 대한 수들은 그냥 리스트에 저장
+def binary_search(array, target):
+    start = 0
+    end = len(array) - 1
+    
+    while start <= end:
+        mid = (start + end) // 2 
+        
+        # 값을 찾은 경우
+        if array[mid] == target:
+            return 1
+        # 중간값이 타겟보다 큰 경우 -> 왼쪽 탐색
+        elif array[mid] > target:
+            end = mid - 1
+        # 중간값이 타겟보다 작은 경우 -> 오른쪽 탐색
+        else:
+            start = mid + 1
+            
+    # 반복문이 끝날 때까지 못 찾았다면 없는 것
+    return 0
 
-for i in mli:  # mli에 있는 수들을 돌면서
-    if i in nli:  # 만약 nli에 있다면
-        print(1)  # 1을 출력해주고
-    else:  # 아니면
-        print(0)  # 0을 출력
+n = int(input())
+li1 = list(map(int, input().split()))
+m = int(input())
+li2 = list(map(int, input().split()))
+
+li1.sort()
+
+for i in li2:
+    print(binary_search(li1, i))
