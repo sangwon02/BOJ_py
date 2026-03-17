@@ -15,6 +15,8 @@ n, m = map(int, input().split())
 #리스트 요소 하나하나 띄어쓰기 출력
 print(" ".join(map(str, li)))
 
+li = [""] * (n) # 리스트 초기화 방법, n은 리스트의 크기, ""는 리스트의 요소값
+
 from itertools import combinations
 
 map = [list(map(int, input().split())) for _ in range(n)]
