@@ -1,17 +1,22 @@
-#처음에는 집합 대신에 리스트를 사용했는데 시간초과가 떠서
-#집합으로 바꾸어서 사용하였다.
-N, M = map(int, input().split())
-set1 = set()
-set2 = set()
+n, m = map(int, input().split())
 
-for i in range(N):
-    set1.add(input())
+n_set = set()
+m_set = set()
 
-for i in range(M):
-    set2.add(input())
 
-li = sorted(list(set1 & set2))
+for _ in range(n):
+    st = input()
+    n_set.add(st)
+    
+for _ in range(m):
+    st = input()
+    m_set.add(st)
+    
+print(len(n_set&m_set))
 
-print(len(li))
-for i in li:
+res = list(n_set&m_set)
+
+res.sort()
+
+for i in res:
     print(i)
