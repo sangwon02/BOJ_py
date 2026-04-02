@@ -1,4 +1,7 @@
-x = int(input())
-y = int(input())
+import sys
+input = sys.stdin.readline
 
-print(x+y)
+A = int(input())
+B = int(input())
+
+print(A+B)
