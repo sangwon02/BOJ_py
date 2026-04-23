@@ -1,9 +1,6 @@
 import sys
 input = sys.stdin.readline
 
-# N-Queen 문제: NxN 체스판에 N개의 퀸을 서로 공격 못하게 배치하는 경우의 수
-# 너무 어렵네 다시보기
-
 n = int(input())
 visited = [-1] * n  # visited[i] = i번째 행의 퀸이 놓인 열 번호
 cnt = 0  # 가능한 배치 경우의 수
