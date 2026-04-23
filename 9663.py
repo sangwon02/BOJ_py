@@ -25,5 +25,6 @@ def dfs(row):
             if check(row):      # 충돌 없으면
                 dfs(row + 1)    # 다음 행으로 진행
 
+
 dfs(0)
 print(cnt)
