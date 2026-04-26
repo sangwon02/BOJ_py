@@ -30,7 +30,6 @@ for _ in range(M):
     query_data = list(map(int, input().split()))
     
     if query_data[0] == 1:
-        # 1번 쿼리 (업데이트)
         i, v = query_data[1] - 1, query_data[2] # 0-based 인덱스로 변환
         A[i] = v
         
@@ -41,7 +40,6 @@ for _ in range(M):
             block_min_idx[b] = get_min_idx(block_min_idx[b], j)
             
     else:
-        # 2번 쿼리 (구간 최솟값 인덱스 조회)
         a, b = query_data[1] - 1, query_data[2] - 1
         answer_idx = -1
         
