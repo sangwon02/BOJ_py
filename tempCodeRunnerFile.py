@@ -1,27 +1,43 @@
 import sys
 input = sys.stdin.readline
-from collections import deque
+sys.setrecursionlimit(20000000000)
 
-n, s = map(int, input().split())
-nums = list(map(int, input().split()))
+M, N = map(int, input().split())
 
-queue = deque()
-current_sum = 0
-minnum = 99999999
+dy = [-1, 1, 0, 0]
+dx = [0, 0, -1, 1]
 
-for num in nums:
-    queue.append(num)
-    current_sum += num
+arr = []
+
+for _ in range(M):
+    row = [int(num) for num in input().strip()]
+    arr.append(row)
     
-    while current_sum >= s:
-        length = len(queue)
-        
-        if length < minnum:
-            minnum = length
-            
-        current_sum -= queue.popleft()
+check = [[0]*N for _ in range(M)]
 
-if minnum == 99999999:
-    print(0)
-else:
-    print(minnum)
+def dfs(y, x):
+    check[y][x] = 1
+    
+    for i in range(4):
+        ny = y + dy[i]
+        nx = x + dx[i]
+        
+        if ny < 0 or ny >= M or nx < 0 or nx >= N:
+            continue
+        if arr[ny][nx] == 1:
+            continue
+        if check[ny][nx] == 1:
+            continue
+        
+        dfs(ny, nx)
+        
+for i in range(N):
+    if arr[0][i] == 0 and check[0][i] == 0:
+        dfs(0, i)
+for i in range(N):
+    if check[-1][i] == 1:
+        print("YES")
+        exit()
+        
+print("NO")
+    
